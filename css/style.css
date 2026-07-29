@@ -172,57 +172,35 @@ p { margin: 0 0 1em; }
   z-index: 1;
 }
 
-.hero-motif {
+.hero-decoration {
   position: absolute;
-  top: 50%;
-  right: -9%;
-  width: min(560px, 52vw);
-  aspect-ratio: 1 / 1;
-  transform: translateY(-50%);
+  right: -40px;
+  top: 0;
+  width: 620px;
+  height: auto;
   pointer-events: none;
-  z-index: 0;
 }
 
-.hero-motif img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+.orbit {
+  transform-origin: 440px 200px;
+  animation: orbit-spin linear infinite;
 }
+.orbit-1 { animation-duration: 34s; }
+.orbit-2 { animation-duration: 68s; }
+.orbit-3 { animation-duration: 120s; }
 
-.hero-motif-rings {
-  opacity: 0.55;
-  animation: hero-motif-spin 60s linear infinite;
-}
-
-.hero-motif-letter {
-  opacity: 0.2;
-}
-
-@keyframes hero-motif-spin {
+@keyframes orbit-spin {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to   { transform: rotate(360deg); }
 }
 
+@media (max-width: 900px) {
+  .hero-decoration { display: none; }
+}
+
+/* Accessibility — required, do not remove or make conditional on anything else */
 @media (prefers-reduced-motion: reduce) {
-  .hero-motif-rings {
-    animation: none;
-  }
-}
-
-@media (max-width: 780px) {
-  .hero-motif {
-    width: 70vw;
-    right: -20%;
-  }
-
-  .hero-motif-rings {
-    opacity: 0.4;
-  }
-
-  .hero-motif-letter {
-    opacity: 0.15;
-  }
+  .orbit { animation: none; }
 }
 
 .hero::after {
