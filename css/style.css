@@ -175,8 +175,9 @@ p { margin: 0 0 1em; }
 .hero-decoration {
   position: absolute;
   right: -40px;
-  top: 0;
-  width: 620px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(680px, 46vw);
   height: auto;
   pointer-events: none;
 }
