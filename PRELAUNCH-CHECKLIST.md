@@ -30,9 +30,25 @@ This site was built with standard legal-advertising caution applied throughout (
 `wordmark-horizontal-header.webp`, `wordmark-stacked.webp`, and `monogram-favicon-source.webp` in `assets/` are v1 generated concepts (no existing brand to sample from), not client-approved final branding.
 **Action:** present as options, confirm one (or request revisions) before final launch. Favicons (`favicon-32.png`, `apple-touch-icon.png`, `favicon-512.png`) were generated from the monogram and will need regenerating if the mark changes.
 
-## 8. Supporting imagery — not yet generated
-Per `AVATAR-IMAGE-BRIEF.md`, the homepage/about/services pages currently use a typographic hero and no photographic imagery (a deliberate, valid choice that needs no generated photo). The brief's optional supporting images (desk/documents, office interior, bookshelf, per-practice-area images, OG share image) have **not** been generated in this pass.
-**Action (optional):** generate per the shot list in `AVATAR-IMAGE-BRIEF.md` if the client wants photographic/illustrative support. Priority order per that doc: A1–A2 (homepage/about) → D (OG share image — currently referenced in meta tags but the file does not yet exist at `assets/og-share-image.webp`) → B (4 practice-area images).
+## 8. Supporting imagery — generated and integrated, one open item
+All 8 images from `AVATAR-IMAGE-BRIEF.md` / `NANO-BANANA-PROMPTS-maria.md` were generated via Nano Banana, QA'd, converted to WebP, and wired into the site (see mapping below). The homepage hero stays typographic as originally built — no photo hero was added.
+
+**Open item — generation-tool watermark:** 7 of the 8 images (all except `desk-documents-signing.webp`) carry a small sparkle/star watermark in the bottom-right corner, most visible on `og-share-image.webp` where it sits alone on an empty navy background. Per client instruction, these were shipped as-is rather than cropped or regenerated.
+**Action:** before final launch, either regenerate the affected images without the watermark, or crop it out, particularly for the OG image since it's the most visible instance (shows in link previews/social shares).
+
+**Images in use:**
+| File | Used on |
+|---|---|
+| `office-window-skyline-abstract.webp` | about.html — "Established 2015" |
+| `bookshelf-legal-texts.webp` | about.html — "Response time" |
+| `desk-documents-signing.webp` | index.html — "Who we work with" |
+| `conveyancing-keys-document.webp` | services.html — Sale & Purchase Agreements |
+| `banking-loan-documents.webp` | services.html — Bank Loan Documentation |
+| `tenancy-keys-handover.webp` | services.html — Tenancy Agreements |
+| `probate-estate-documents.webp` | services.html — Probate & Letters of Administration |
+| `og-share-image.webp` | OG meta tags, all four pages (cropped to 1200×630) |
+
+Raw full-resolution source PNGs remain in `assets/` locally for future re-editing but are excluded from git via `.gitignore` to keep the repo lean.
 
 ## 9. Functional QA before go-live
 - [ ] WhatsApp link opens with a sensible prefilled message: `https://wa.me/60126036230?text=...`
@@ -40,5 +56,6 @@ Per `AVATAR-IMAGE-BRIEF.md`, the homepage/about/services pages currently use a t
 - [ ] All four pages checked on mobile widths (nav toggle, form layout)
 - [ ] No outcome-guarantee language anywhere ("we will win," "guaranteed approval," etc.) — verified in this build
 - [ ] No fabricated founder bio, no fabricated Bar admission number, no fabricated named colleagues — verified in this build
-- [ ] No AI-generated image anywhere purports to be a real photo of "Maria R." or any specific named person — verified (no such imagery was generated)
+- [ ] No AI-generated image anywhere purports to be a real photo of "Maria R." or any specific named person — verified, no faces/identifiable people in any generated image (item 8)
+- [ ] Generation-tool watermark removed or cropped from the 7 affected images before launch (item 8)
 - [ ] Domain and email finalized and all placeholder URLs/keys replaced (items 1–2)
