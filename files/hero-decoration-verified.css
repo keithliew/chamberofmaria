@@ -1,0 +1,29 @@
+.hero-decoration {
+  position: absolute;
+  right: -40px;
+  top: 0;
+  width: 620px;
+  height: auto;
+  pointer-events: none;
+}
+
+.orbit {
+  transform-origin: 440px 260px;
+  animation: orbit-spin linear infinite;
+}
+.orbit-1 { animation-duration: 34s; }
+.orbit-2 { animation-duration: 68s; }
+.orbit-3 { animation-duration: 120s; }
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .hero-decoration { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit { animation: none; }
+}

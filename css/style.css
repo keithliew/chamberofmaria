@@ -182,7 +182,7 @@ p { margin: 0 0 1em; }
 }
 
 .orbit {
-  transform-origin: 440px 200px;
+  transform-origin: 440px 260px;
   animation: orbit-spin linear infinite;
 }
 .orbit-1 { animation-duration: 34s; }
@@ -198,7 +198,6 @@ p { margin: 0 0 1em; }
   .hero-decoration { display: none; }
 }
 
-/* Accessibility — required, do not remove or make conditional on anything else */
 @media (prefers-reduced-motion: reduce) {
   .orbit { animation: none; }
 }
