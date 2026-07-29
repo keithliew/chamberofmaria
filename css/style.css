@@ -75,8 +75,9 @@ p { margin: 0 0 1em; }
 }
 
 .site-header .logo img {
-  height: 40px;
+  height: 46px;
   width: auto;
+  display: block;
 }
 
 .main-nav {
@@ -146,6 +147,32 @@ p { margin: 0 0 1em; }
   color: var(--paper);
   padding-block: clamp(3.5rem, 8vw, 6rem);
   position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-motif {
+  position: absolute;
+  top: 50%;
+  right: -9%;
+  width: min(560px, 52vw);
+  height: auto;
+  transform: translateY(-50%);
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 780px) {
+  .hero-motif {
+    width: 70vw;
+    right: -20%;
+    opacity: 0.12;
+  }
 }
 
 .hero::after {
@@ -519,10 +546,10 @@ section {
 }
 
 .footer-logo img {
-  height: 34px;
+  height: 36px;
+  width: auto;
   margin-bottom: 1rem;
-  filter: brightness(0) invert(1);
-  opacity: 0.92;
+  display: block;
 }
 
 /* ---------- Mobile nav ---------- */
